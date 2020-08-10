@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (5.2.1)
+  - PullToRefreshSwift (3.0.3)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SideMenuSwift (2.0.5)
+  - SVProgressHUD (2.2.5)
+  - Toaster (2.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - PullToRefreshSwift (~> 3.0)
+  - SDWebImage
+  - SideMenuSwift
+  - SVProgressHUD
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - PullToRefreshSwift
+    - SDWebImage
+    - SideMenuSwift
+    - SVProgressHUD
+    - Toaster
+
+SPEC CHECKSUMS:
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  PullToRefreshSwift: 0743b818072bfd7c9464addc2d1b987b131057ca
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SideMenuSwift: c7d99c270e0fad922a14b81f1dcc7a84c764bcd5
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+
+PODFILE CHECKSUM: e5d890e4d4151e2b97646adf708d49baa2bf60d8
+
+COCOAPODS: 1.9.1
