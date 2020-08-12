@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4ZX-bm-llI" firstAttribute="centerX" secondItem="ZFG-Of-AJD" secondAttribute="centerX" id="Ad2-LF-hcU"/>
                             <constraint firstItem="bdg-o6-44z" firstAttribute="leading" secondItem="ZFG-Of-AJD" secondAttribute="leading" constant="10" id="QZv-Bo-p07"/>
@@ -59,6 +59,7 @@
             <connections>
                 <outlet property="imgCell" destination="bdg-o6-44z" id="cQE-3M-U0p"/>
                 <outlet property="lbName" destination="4ZX-bm-llI" id="ccg-T8-4Rb"/>
+                <outlet property="viewCell" destination="ZFG-Of-AJD" id="iZy-gp-8iB"/>
             </connections>
             <point key="canvasLocation" x="-417" y="-33"/>
         </collectionViewCell>

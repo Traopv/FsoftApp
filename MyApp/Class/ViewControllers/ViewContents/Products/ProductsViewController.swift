@@ -21,12 +21,19 @@ class ProductsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         self.myColection.addPullToRefresh(){
             self.refreshData()
         }
         
         myColection.register(UINib.init(nibName: "ProductsCollCell", bundle: nil), forCellWithReuseIdentifier: "ProductsCollCell")
         loadData()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //hien tabbar
+        self.tabBarController?.tabBar.isHidden = false
     }
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -37,8 +44,7 @@ class ProductsViewController: UIViewController {
             let numberOfItemInRow : CGFloat = 3
             let iLineSpaing : CGFloat = 5
             let interItemSpacing : CGFloat = 5
-            
-            let iWidth = (view.bounds.width - (numberOfItemInRow - 1) * interItemSpacing) / numberOfItemInRow
+            let iWidth = (myColection.frame.size.width - (numberOfItemInRow - 1) * interItemSpacing) / numberOfItemInRow
             let iHeight = iWidth
             
             collectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -81,7 +87,7 @@ class ProductsViewController: UIViewController {
         }
     }
 }
-extension ProductsViewController: UICollectionViewDelegate,UICollectionViewDataSource{
+extension ProductsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -90,7 +96,9 @@ extension ProductsViewController: UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productCates.count
     }
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets.init(top: 5, left: 5, bottom: 0, right: 5)
+//    }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsCollCell", for: indexPath) as! ProductsCollCell
         
@@ -116,6 +124,8 @@ extension ProductsViewController: UICollectionViewDelegate,UICollectionViewDataS
             }
         }
         self.navigationController?.pushViewController(productCatesIdVC, animated: true)
+        // an tabbar
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

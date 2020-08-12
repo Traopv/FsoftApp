@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="142" id="KGk-i7-Jjw" customClass="ShopInfo" customModule="MyApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-img.png" translatesAutoresizingMaskIntoConstraints="NO" id="NiJ-Mx-buk">
+                        <rect key="frame" x="16" y="10" width="48" height="48"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="48" id="hHv-AW-mPW"/>
+                            <constraint firstAttribute="height" constant="48" id="rsK-S3-XhM"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cooky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mg-5o-Ymk">
+                        <rect key="frame" x="72" y="10" width="49" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1k công thức, 14k người theo dõi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmF-q3-ZHX">
+                        <rect key="frame" x="72" y="37" width="211" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bạch tuộc nhúng lá me, món ăn thanh nhẹ cho ngày cuối tuần." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ifj-Hu-vrI">
+                        <rect key="frame" x="16" y="93" width="288" height="36"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vmF-q3-ZHX" firstAttribute="leading" secondItem="NiJ-Mx-buk" secondAttribute="trailing" constant="8" id="0cF-hv-cPE"/>
+                    <constraint firstItem="Ifj-Hu-vrI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="31T-ES-BMQ"/>
+                    <constraint firstItem="7Mg-5o-Ymk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ERq-45-uNF"/>
+                    <constraint firstItem="NiJ-Mx-buk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="FA9-A4-nby"/>
+                    <constraint firstItem="Ifj-Hu-vrI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Uhe-f4-mp9"/>
+                    <constraint firstItem="vmF-q3-ZHX" firstAttribute="top" secondItem="7Mg-5o-Ymk" secondAttribute="bottom" constant="6" id="Wpd-4E-gUv"/>
+                    <constraint firstItem="7Mg-5o-Ymk" firstAttribute="leading" secondItem="NiJ-Mx-buk" secondAttribute="trailing" constant="8" id="d2q-e2-snr"/>
+                    <constraint firstItem="NiJ-Mx-buk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="iRC-tZ-qoC"/>
+                    <constraint firstAttribute="bottom" secondItem="Ifj-Hu-vrI" secondAttribute="bottom" constant="11" id="p90-hD-tiU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="227.536231884058" y="107.8125"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="default-img.png" width="100" height="100"/>
+    </resources>
+</document>

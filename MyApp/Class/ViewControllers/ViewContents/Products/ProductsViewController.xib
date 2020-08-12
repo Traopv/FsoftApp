@@ -20,8 +20,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="F0k-Yw-bNt">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="5" y="5" width="365" height="662"/>
+                    <color key="backgroundColor" red="0.94660783678756477" green="0.94660783678756477" blue="0.94660783678756477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="T6Y-9J-NHf">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,19 +34,16 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" red="0.91974311140534792" green="0.91974311140534792" blue="0.91974311140534792" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="F0k-Yw-bNt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6m2-oN-Yge"/>
-                <constraint firstItem="F0k-Yw-bNt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="I6h-fB-FKE"/>
+                <constraint firstItem="F0k-Yw-bNt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="I6h-fB-FKE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="F0k-Yw-bNt" secondAttribute="bottom" id="LEP-z0-lRS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F0k-Yw-bNt" secondAttribute="trailing" id="S4E-7B-2MV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F0k-Yw-bNt" secondAttribute="trailing" constant="5" id="S4E-7B-2MV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="F0k-Yw-bNt" secondAttribute="bottom" id="ejb-vN-0kl"/>
-                <constraint firstItem="F0k-Yw-bNt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iWk-yU-Hjt"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="F0k-Yw-bNt" secondAttribute="trailing" id="nOY-3Y-RKA"/>
-                <constraint firstItem="F0k-Yw-bNt" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zAa-ns-bHc"/>
+                <constraint firstItem="F0k-Yw-bNt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="iWk-yU-Hjt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="580" y="188"/>
+            <point key="canvasLocation" x="102" y="131"/>
         </view>
     </objects>
 </document>

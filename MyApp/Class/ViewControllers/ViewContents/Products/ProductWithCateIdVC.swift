@@ -33,24 +33,24 @@ class ProductWithCateIdVC: UIViewController {
         setUpCollectionViewItems()
     }
     func setUpCollectionViewItems(){
-//        if collectionViewFlowLayout == nil{
-//            let numberOfItemInRow : CGFloat = 2
-//            let iLineSpaing : CGFloat = 5
-//            let interItemSpacing : CGFloat = 5
-//            //let numberOfItemInColum : CGFloat = 10 / numberOfItemInRow
-//            let iWidth = (view.bounds.width - (numberOfItemInRow - 1) * interItemSpacing) / numberOfItemInRow
-//            let iHeight : CGFloat = 363//(view.bounds.height - (10 / numberOfItemInRow - 1) * iLineSpaing) / numberOfItemInColum
-//
-//            collectionViewFlowLayout = UICollectionViewFlowLayout()
-//
-//            collectionViewFlowLayout.itemSize = CGSize(width: iWidth, height: iHeight)
-//            collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
-//            collectionViewFlowLayout.scrollDirection = .vertical
-//            collectionViewFlowLayout.minimumLineSpacing = iLineSpaing
-//            collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
-//
-//            collectionProduct.setCollectionViewLayout(collectionViewFlowLayout, animated : true)
-//        }
+        if collectionViewFlowLayout == nil{
+            let numberOfItemInRow : CGFloat = 2
+            let iLineSpaing : CGFloat = 5
+            let interItemSpacing : CGFloat = 5
+            //let numberOfItemInColum : CGFloat = 10 / numberOfItemInRow
+            let iWidth = (collectionProduct.frame.size.width - (numberOfItemInRow - 1) * interItemSpacing) / numberOfItemInRow
+            let iHeight : CGFloat = 312//(view.bounds.height - (10 / numberOfItemInRow - 1) * iLineSpaing) / numberOfItemInColum
+
+            collectionViewFlowLayout = UICollectionViewFlowLayout()
+
+            collectionViewFlowLayout.itemSize = CGSize(width: iWidth, height: iHeight)
+            collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
+            collectionViewFlowLayout.scrollDirection = .vertical
+            collectionViewFlowLayout.minimumLineSpacing = iLineSpaing
+            collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
+
+            collectionProduct.setCollectionViewLayout(collectionViewFlowLayout, animated : true)
+        }
     }
     func loadData(){
         VTBase.showLoading()
@@ -73,7 +73,6 @@ class ProductWithCateIdVC: UIViewController {
     func refreshData(){
         page = 0
         pageSize = 20
-        cateId = ""
         productCateId.removeAllObjects()
         collectionProduct.reloadData()
         loadData()
@@ -85,12 +84,6 @@ class ProductWithCateIdVC: UIViewController {
 extension ProductWithCateIdVC: UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return productCateId.count
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (view.bounds.width / 2) - 10, height: 363)
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets.init(top: 5, left: 5, bottom: 0, right: 5)
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "productCateId", for: indexPath) as! productCateId
@@ -119,5 +112,11 @@ extension ProductWithCateIdVC: UICollectionViewDataSource,UICollectionViewDelega
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailProduct = DetailProductVC.init()
+        self.navigationController?.pushViewController(detailProduct, animated: true)
+        // an tabbar
+         self.tabBarController?.tabBar.isHidden = true
+    }
     
 }

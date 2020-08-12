@@ -20,8 +20,8 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="rqx-6Y-Jyo">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="5" y="5" width="365" height="662"/>
+                    <color key="backgroundColor" red="0.9149260777265914" green="0.9149260777265914" blue="0.9149260777265914" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jhI-Ta-Qpa">
                         <size key="itemSize" width="128" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,12 +34,12 @@
                     </connections>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" red="0.93208929016182462" green="0.93208929016182462" blue="0.93208929016182462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rqx-6Y-Jyo" secondAttribute="bottom" id="7dE-1J-6Bc"/>
-                <constraint firstItem="rqx-6Y-Jyo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DAf-Ps-4Wf"/>
-                <constraint firstItem="rqx-6Y-Jyo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NvU-pb-dOB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rqx-6Y-Jyo" secondAttribute="trailing" id="ukC-6X-H0T"/>
+                <constraint firstItem="rqx-6Y-Jyo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="DAf-Ps-4Wf"/>
+                <constraint firstItem="rqx-6Y-Jyo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="NvU-pb-dOB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rqx-6Y-Jyo" secondAttribute="trailing" constant="5" id="ukC-6X-H0T"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-246" y="32"/>
